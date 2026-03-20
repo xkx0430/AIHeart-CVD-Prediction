@@ -124,7 +124,7 @@ Core predictors:
 | `Systolic Blood Pressure` | Continuous: `[70, 200]  mmHg` |
 | `Body Mass Index` | Continuous: `[18.5, 39.9]  kg/m²` |
 | `Sleep Duration` | Continuous: `[5, 10]  hours` |
-| `County-level Area-Deprivation Index` | Discrete: `[0, 9]`, decile cut points are computed from the whole training dataset |
+| `County-level Area-Deprivation Index Decile` | Discrete: `[0, 9]`, decile cut points are computed from the whole training dataset |
 | `Antihypertensive Treatment` | Discrete: `0` = no, `1` = yes |
 | `Lipid Lowering Treatment` | Discreter: `0` = no, `1` = yes |
 | `Diabetes Mellitus` | Discrete: `0` = no, `1` = yes |
