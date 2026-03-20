@@ -126,7 +126,7 @@ Core predictors:
 | `Sleep Duration` | Continuous: `[5, 10]  hours` |
 | `County-level Area-Deprivation Index` | Continuous: ` ` |
 | `Antihypertensive Treatment` | Discrete: `0` = no, `1` = yes |
-| `Lipid Lowering Treatment` | Discreter: `0` = no, `1` = yes |
+| `Lipid Lowering Treatment` | Discrete: `0` = no, `1` = yes |
 | `Diabetes Mellitus` | Discrete: `0` = no, `1` = yes |
 | `Current Smoker` | Discrete: `0` = no, `1` = yes |
 | `Northern China Residence` | Discrete: `0` = no, `1` = yes |
