@@ -124,12 +124,12 @@ Core predictors:
 | `Systolic Blood Pressure` | Continuous: `[70, 200]  mmHg` |
 | `Body Mass Index` | Continuous: `[18.5, 39.9]  kg/m²` |
 | `Sleep Duration` | Continuous: `[5, 10]  hours` |
-| `County-level Area-Deprivation Index` | Continuous: ` ` Please refer to doi:10.1136/jech-2024-223570 |
+| `County-level Area-Deprivation Index` | Continuous: ` `, refer to doi:10.1136/jech-2024-223570 |
 | `Antihypertensive Treatment` | Discrete: `0` = no, `1` = yes |
 | `Lipid Lowering Treatment` | Discrete: `0` = no, `1` = yes |
 | `Diabetes Mellitus` | Discrete: `0` = no, `1` = yes |
 | `Current Smoker` | Discrete: `0` = no, `1` = yes |
-| `Northern China Residence` | Discrete: `0` = no, `1` = yes |
+| `Northern China Residence` | Discrete: `0` = no, `1` = yes, divided by the Yangtze River |
 | `Alcohol Consumption` | Discrete: `0` = no, `1` = yes |
 | `Urban/Rural Residence` | Discrete: `0` = urban, `1` = rural |
 
