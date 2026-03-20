@@ -25,10 +25,10 @@ def _load_data(data_file: str, model_type: str, sex_value: int):
     predictor_processor = PredictorProcessor(model_type=model_type)
     surv_df = predictor_processor(data_file)
     if surv_df is None:
-        raise ValueError(f"数据处理失败: {data_file}")
+        raise ValueError(f"Data processing failed: {data_file}")
     surv_df = surv_df[surv_df["Sex"] == sex_value].reset_index(drop=True).drop(columns=["Sex"])
     if len(surv_df) == 0:
-        raise ValueError(f"过滤 Sex={sex_value} 后无样本")
+        raise ValueError(f"No samples found after filtering Sex={sex_value}")
 
     features = surv_df.iloc[:, :-2].values.astype(np.float32)
     event = surv_df.iloc[:, -2].values.astype(bool)
@@ -44,7 +44,7 @@ def _build_feed_dict(session: InferenceSession, features: np.ndarray, t0: float)
     """
     inputs = session.get_inputs()
     if len(inputs) < 2:
-        raise ValueError("ONNX 模型输入少于2个，期望包含 features 和 t0")
+        raise ValueError("ONNX model has fewer than 2 inputs; expected features and t0")
 
     input_names = [x.name for x in inputs]
     if "features" in input_names:
