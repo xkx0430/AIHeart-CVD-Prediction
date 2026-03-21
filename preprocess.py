@@ -123,7 +123,7 @@ class PredictorProcessor:
         present_sex_values = set(df['Sex'].unique().tolist())
         if len(present_sex_values) != 2:
             warnings.warn(
-                f"Dataset should include both male (Sex=1) and female (Sex=2). Missing sex values: {missing_sex_values}",
+                f"Dataset should include both male (Sex=0) and female (Sex=1). Missing sex values: {missing_sex_values}",
                 UserWarning
             )
 
