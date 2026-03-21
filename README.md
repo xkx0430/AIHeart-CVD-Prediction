@@ -114,7 +114,7 @@ Required label columns:
 
 Core predictors:
 
-| Item | Value space / meaning |
+| Predictor | Value space / meaning |
 |---|---|
 | `Sex` | Discrete: `0` = male, `1` = female, used only for subgroup filtering |
 | `Age` | Continuous: `[40, 79]` |
@@ -135,7 +135,7 @@ Core predictors:
 
 Additional predictors required by `Full`:
 
-| Item | Value space / meaning |
+| Predictor | Value space / meaning |
 |---|---|
 | `Fasting Glucose` | Continuous: `[3, 20]  mmol/L` |
 | `2-hour Postprandial Glucose` | Continuous: `[3, 30]  mmol/L` |
