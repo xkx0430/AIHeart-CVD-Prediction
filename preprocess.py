@@ -147,7 +147,11 @@ class PredictorProcessor:
         df['(max(SBP, 100) - 130) / 20'] = df['Systolic Blood Pressure'].apply(lambda x: max(x, 100)).apply(lambda x: (x - 130) / 20)
         df['(min(BMI, 20) - 25) / 5'] = df['Body Mass Index'].apply(lambda x: min(x, 20)).apply(lambda x: (x - 25) / 5)
         df['(max(BMI, 20) - 25) / 5'] = df['Body Mass Index'].apply(lambda x: max(x, 20)).apply(lambda x: (x - 25) / 5)
-        df['SDI'] = pd.qcut(df['County-level Area-Deprivation Index'], 10, labels=False, duplicates='drop') + 1
+        if len(df) < 100:
+            sdi_bins = [-np.inf, -2.17207712, -1.14352564, -0.59425076, -0.13152296, 0.2421663, 0.54199637, 0.87279851, 1.30817493, 1.67435324, np.inf]
+            df['SDI'] = pd.cut(df['County-level Area-Deprivation Index'], bins=sdi_bins, labels=False, include_lowest=True) + 1
+        else:
+            df['SDI'] = pd.qcut(df['County-level Area-Deprivation Index'], 10, labels=False, duplicates='drop') + 1
         if self.model_flag:
             df['ln(UACR)'] = df['Urinary Albumin-to-Creatinine Ratio'].apply(np.log)
             df['(HbA1c - 6.0)'] = df['HbA1c'].apply(lambda x: x - 6.0)
