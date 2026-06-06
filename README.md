@@ -21,7 +21,7 @@ AIHeart-CVD-Prediction is designed to predict CVD, MI, and STROKE risk, and is i
 
 ## 🌐 Web Portal
 
-You can also use the online portal: [Cardiovascular Disease Risk Assessment](http://cvd_test.myweihp.win:30212/).
+You can also use the online portal: [Cardiovascular Disease Risk Assessment](https://www.rjh.com.cn/2018RJPortal/4c/Clinicalpredictionmodels/ChinaAIHeart2/index.shtml).
 
 The website provides a visual submission workflow and a file-upload interface for obtaining prediction results.
 
